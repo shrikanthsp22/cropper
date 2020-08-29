@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import HomePage from './Pages/HomePage';
+import Showuploadedimages from './Pages/ShowUploadedImages';
+import { Switch, Route } from 'react-router-dom';
+import { Title } from './styles';
+import { Menu } from './Pages/Menu';
+import { CONSTANTS } from './CONSTANTS';
+import { About } from './Pages/About'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Title>
+        <a href="/" style={{ color: 'white', fontSize: '2rem', cursor: 'pointer', textDecoration: 'none' }}>{CONSTANTS.HEADER}</a>
+        <Menu />
+      </Title>
+      <Switch>
+        <Route exact path='/about' component={About} />
+        <Route exact path='/' component={HomePage} />
+        <Route path='/view' component={Showuploadedimages} />
+      </Switch>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+.anchorButton{
+padding: 10px;
+background-color:#64dd64;
+border-radius: 10px;
+margin-bottom: 0;
+border:1px solid green;
+text-decoration: none;
+color: white;
+font-weight: 600;
+}
+.anchorButton:hover{
+    background-color:orange;
+    color: black;
+}
+
+.icons{
+    filter: invert(100%); 
+}
